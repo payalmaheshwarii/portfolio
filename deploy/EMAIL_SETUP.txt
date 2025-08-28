@@ -1,0 +1,64 @@
+EMAIL SETUP GUIDE FOR NODEMAILER
+=================================
+
+STEP 1: Create Gmail App Password
+---------------------------------
+1. Go to your Google Account settings: https://myaccount.google.com/
+2. Navigate to Security > 2-Step Verification (must be enabled first)
+3. Scroll down to "App passwords"
+4. Click "Generate" and select "Mail"
+5. Give it a name like "Portfolio Contact Form"
+6. Copy the 16-character app password (looks like: abcd efgh ijkl mnop)
+
+STEP 2: Create Environment File
+------------------------------
+1. Copy the .env.example file to .env:
+   cp .env.example .env
+
+2. Edit the .env file and replace with your details:
+   EMAIL_USER=payalmaheshwari2610@gmail.com
+   EMAIL_PASS=your-16-character-app-password
+   PORT=3000
+   NODE_ENV=production
+
+STEP 3: Install New Dependencies
+-------------------------------
+npm install
+
+STEP 4: Start the Server
+-----------------------
+npm start
+
+SECURITY NOTES:
+--------------
+- Never share your .env file or commit it to Git
+- Use App Passwords, not your regular Gmail password
+- The .env file should be in the same directory as server.js
+
+TESTING:
+-------
+1. Fill out the contact form on your portfolio
+2. Check your Gmail inbox for the message
+3. Check server console for success/error messages
+
+TROUBLESHOOTING:
+---------------
+- "Invalid login": Check your app password is correct
+- "Less secure app access": Use App Password instead
+- "535 Authentication failed": Enable 2-factor auth and create app password
+- No email received: Check spam folder
+
+ALTERNATIVE EMAIL PROVIDERS:
+---------------------------
+If you don't want to use Gmail, you can modify server.js:
+
+For Outlook/Hotmail:
+service: 'outlook'
+
+For Yahoo:
+service: 'yahoo'
+
+For custom SMTP:
+host: 'your-smtp-server.com'
+port: 587
+secure: false
