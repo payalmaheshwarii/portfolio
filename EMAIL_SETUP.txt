@@ -1,0 +1,40 @@
+QUICK EMAIL SETUP GUIDE
+=======================
+
+STEP 1: Gmail App Password
+--------------------------
+1. Go to: https://myaccount.google.com/security
+2. Enable "2-Step Verification" if not already enabled
+3. Go to "App passwords" section
+4. Generate password for "Mail" 
+5. Copy the 16-character password (like: abcd efgh ijkl mnop)
+
+STEP 2: Create .env File
+------------------------
+1. Copy the example file:
+   cp .env.example .env
+
+2. Edit .env with your details:
+   EMAIL_USER=payalmaheshwari2610@gmail.com
+   EMAIL_PASS=your-16-character-app-password
+   NODE_ENV=development
+   PORT=5000
+
+STEP 3: Restart Server
+---------------------
+The server should automatically restart and pick up your email settings.
+
+TESTING:
+--------
+1. Go to your portfolio contact form
+2. Fill out and submit the form
+3. Check your Gmail inbox for the message
+4. Check the server console for success/error messages
+
+SECURITY:
+---------
+- Never commit the .env file to version control
+- Use App Password, not your regular Gmail password
+- Keep your credentials private
+
+That's it! Your contact form will now send real emails to your Gmail.
