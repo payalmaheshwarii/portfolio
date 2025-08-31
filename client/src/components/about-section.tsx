@@ -22,7 +22,7 @@ export default function AboutSection() {
             <img
               src="./assets/profile.jpg"
               alt="Professional developer headshot"
-              className="rounded-2xl w-80 h-100 shadow-lg ml-20"
+              className="rounded-2xl w-80 h-100 shadow-lg mx-10"
               data-testid="img-about"
             />
           </div>
