@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { useIsMobile } from "@/hooks/use-mobile";
+import aboutProfilePhoto from "../../assets/About_profile_photo.png";
 
 export default function AboutSection() {
    const isMobile = useIsMobile();
@@ -22,7 +23,7 @@ export default function AboutSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {<div>
             <img
-              src="./assets/About_profile_photo.png"
+              src={aboutProfilePhoto}
               alt="Professional developer headshot"
               className="rounded-2xl w-80 h-100 shadow-lg mx-10"
               data-testid="img-about"

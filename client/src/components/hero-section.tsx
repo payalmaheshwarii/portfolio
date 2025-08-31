@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail } from "lucide-react";
+import profilePhoto from "../../assets/Main_profile_photo.png";
 
 export default function HeroSection() {
   const scrollToSection = (sectionId: string) => {
@@ -74,7 +75,7 @@ export default function HeroSection() {
           </div>
           <div className="flex justify-center">
             <img
-              src="./assets/Main_profile_photo.png"
+              src={profilePhoto}
               alt="Professional developer workspace"
               className="rounded-2xl shadow-2xl w-full max-w-md hover-lift"
               data-testid="img-hero"
