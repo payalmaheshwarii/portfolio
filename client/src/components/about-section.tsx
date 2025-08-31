@@ -20,13 +20,13 @@ export default function AboutSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <img
-              src="https://images.unsplash.com/photo-1494790108755-2616b332c820?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=800"
+              src="./assets/profile.jpg"
               alt="Professional developer headshot"
-              className="rounded-2xl w-full shadow-lg"
+              className="rounded-2xl w-80 h-100 shadow-lg ml-20"
               data-testid="img-about"
             />
           </div>
-          <div className="space-y-6">
+          <div className="space-y-4">
             <p className="text-lg text-muted-foreground leading-relaxed" data-testid="about-text-1">
               Based in Ahmedabad, Gujarat, I'm a software engineer at MeasureOne
               where I've been instrumental in developing and scaling consumer
@@ -50,9 +50,9 @@ export default function AboutSection() {
               </Card>
               <Card className="bg-card p-6 border border-border">
                 <div className="text-2xl font-bold text-secondary mb-2" data-testid="stat-improvement">
-                  25%
+                ⚡
                 </div>
-                <div className="text-muted-foreground">Accuracy Improvement</div>
+                <div className="text-muted-foreground">Full-Stack Expertise</div>
               </Card>
             </div>
           </div>

@@ -21,12 +21,6 @@ export default function EducationSection() {
       description: "Qualified for zonal round with Universal HealthCard Web Application",
       color: "secondary",
     },
-    {
-      icon: Code,
-      title: "GitHub Achievements",
-      description: "Pull Shark badge for significant contributions to open source projects",
-      color: "accent",
-    },
   ];
 
   return (

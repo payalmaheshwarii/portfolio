@@ -17,6 +17,7 @@ const createTransporter = () => {
 export async function registerRoutes(app: Express): Promise<Server> {
   // Contact form email route
   app.post('/api/contact', async (req, res) => {
+    console.log("Contact api reached");
     const { name, email, subject, message } = req.body;
     
     // Validate required fields
@@ -27,6 +28,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       });
     }
 
+    console.log("Validation done");
     try {
       // Check if email credentials are configured
       if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
@@ -44,6 +46,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         from: process.env.EMAIL_USER,
         to: process.env.EMAIL_USER, // Your email where you want to receive messages
         subject: `Portfolio Contact: ${subject || 'New Message'}`,
+        replyTo: email,
         html: `
           <h3>New Contact Form Submission</h3>
           <p><strong>Name:</strong> ${name}</p>
@@ -56,6 +59,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         `
       };
 
+      console.log("Before sending mail");
       // Send the email
       await transporter.sendMail(mailOptions);
       

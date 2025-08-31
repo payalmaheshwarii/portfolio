@@ -33,10 +33,11 @@ export default function Navigation() {
       data-testid="navigation"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
-          <div className="text-xl font-bold gradient-text" data-testid="logo">
-            Payal Maheshwari
-          </div>
+        <div className="flex justify-between items-center py-8">
+        <div className="text-2xl font-bold">
+          <span className="gradient-text">Payal</span> Maheshwari
+        </div>
+
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
@@ -74,7 +75,7 @@ export default function Navigation() {
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="md:hidden border-t border-border bg-background/95 nav-blur">
-            <div className="px-2 pt-2 pb-3 space-y-1">
+            <div className="px-2 pt-6 pb-3 space-y-1">
               {[
                 { label: "Home", id: "home" },
                 { label: "About", id: "about" },

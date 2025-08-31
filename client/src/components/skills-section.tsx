@@ -33,29 +33,29 @@ export default function SkillsSection() {
       title: "DevOps & Cloud",
       color: "primary",
       skills: [
-        { name: "AWS", level: 80 },
-        { name: "Docker", level: 85 },
-        { name: "Kubernetes", level: 75 },
+        { name: "AWS", level: 75 },
+        { name: "Docker", level: 70 },
+        { name: "Kubernetes", level: 70 },
       ],
     },
     {
       title: "Tools & Others",
       color: "secondary",
       skills: [
-        { name: "GraphQL", level: 70 },
-        { name: "gRPC", level: 65 },
-        { name: "Stripe/Razorpay", level: 75 },
+        { name: "Bitbucket & Jira", level: 95 },
+        { name: "Datadog & Logrocket", level: 90 },
+        { name: "Grafana & QuickSight", level: 85 },
       ],
     },
     {
       title: "AI & Productivity",
       color: "accent",
       skills: [
-        { name: "GitHub Copilot", level: 90 },
-        { name: "Cursor IDE", level: 85 },
-        { name: "Agile/Scrum", level: 90 },
+        { name: "Scrum & Agile", level: 85 },
+        { name: "Prompt Engineering", level: 90 },
+        { name: "Code Assistants (Cursor, Copilot, Replit)", level: 90 },
       ],
-    },
+    }    
   ];
 
   return (
@@ -70,7 +70,7 @@ export default function SkillsSection() {
             Technical Skills
           </h2>
           <p className="text-xl text-muted-foreground" data-testid="skills-subtitle">
-            Technologies I work with
+            Technologies I work with (Not limited to)
           </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

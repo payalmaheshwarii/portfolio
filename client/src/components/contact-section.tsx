@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import { apiRequest } from "@/lib/queryClient";
 import { Mail, Phone, MapPin, Github, Linkedin } from "lucide-react";
 
 export default function ContactSection() {
@@ -40,19 +41,24 @@ export default function ContactSection() {
     }
 
     try {
-      // Simulate form submission
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      // Call backend API
+      const response = await apiRequest('POST', '/api/contact', formData);
+      const result = await response.json();
       
-      toast({
-        title: "Message Sent!",
-        description: "Thank you for your message. I'll get back to you soon.",
-      });
-      
-      setFormData({ name: "", email: "", subject: "", message: "" });
+      if (result.success) {
+        toast({
+          title: "Message Sent!",
+          description: result.message || "Thank you for your message. I'll get back to you soon.",
+        });
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        throw new Error(result.message || "Failed to send message");
+      }
     } catch (error) {
+      console.error('Contact form error:', error);
       toast({
         title: "Error",
-        description: "Failed to send message. Please try again.",
+        description: error instanceof Error ? error.message : "Failed to send message. Please try again.",
         variant: "destructive",
       });
     } finally {
@@ -68,7 +74,7 @@ export default function ContactSection() {
             Let's Connect
           </h2>
           <p className="text-xl text-muted-foreground" data-testid="contact-subtitle">
-            I'm always open to new opportunities and interesting conversations
+            I'm always open to new opportunities and interesting conversations :)
           </p>
         </div>
         <div className="max-w-4xl mx-auto">
@@ -178,7 +184,7 @@ export default function ContactSection() {
                     type="text"
                     value={formData.subject}
                     onChange={handleInputChange}
-                    placeholder="Project Inquiry"
+                    placeholder="Inquiring about..."
                     className="mt-2"
                     data-testid="input-subject"
                   />
@@ -192,7 +198,7 @@ export default function ContactSection() {
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
-                    placeholder="Tell me about your project..."
+                    placeholder=""
                     rows={5}
                     className="mt-2 resize-none"
                     data-testid="textarea-message"

@@ -24,7 +24,7 @@ export default function HeroSection() {
             </h1>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed" data-testid="hero-description">
               4+ years of experience building scalable web applications and data
-              platforms at MeasureOne. Passionate about creating efficient,
+              platforms at <a href="https://www.measureone.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/90">MeasureOne</a>. Passionate about creating efficient,
               user-centric solutions using modern technologies.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
@@ -74,7 +74,7 @@ export default function HeroSection() {
           </div>
           <div className="flex justify-center">
             <img
-              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
+              src="./assets/profile photo_2.png"
               alt="Professional developer workspace"
               className="rounded-2xl shadow-2xl w-full max-w-md hover-lift"
               data-testid="img-hero"

@@ -5,32 +5,11 @@ import { Github } from "lucide-react";
 export default function ProjectsSection() {
   const projects = [
     {
-      title: "SGH Medical Portal",
-      description: "Online medical details management system for Smart Gujarat Hackathon",
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
-      technologies: ["CSS", "HTML", "JavaScript"],
-      github: "https://github.com/payalmaheshwarii/SGH-2019-20-",
-    },
-    {
-      title: "JavaScript Memory Game",
-      description: "Interactive memory matching game built with vanilla JavaScript",
-      image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
-      technologies: ["JavaScript", "CSS", "HTML"],
-      github: "https://github.com/payalmaheshwarii/JavaScript_MemoryGame",
-    },
-    {
-      title: "Attendance Management System",
-      description: "Complete attendance tracking system with analytics and reporting",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
-      technologies: ["JavaScript", "Node.js", "MySQL"],
-      github: "https://github.com/payalmaheshwarii/attendance_management_system",
-    },
-    {
-      title: "Learning Management System",
-      description: "Comprehensive LMS platform for online education and course management",
-      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
-      technologies: ["JavaScript", "React", "Node.js"],
-      github: "https://github.com/payalmaheshwarii/LMS-",
+      title: 'SourceMates',
+      github: "https://github.com/payalmaheshwarii/SourceMates_UI",
+      description: "SourceMates is a Tinder-style app built for coders to connect, and collaborate",
+      image: "./assets/sourceMates_1.png",
+      technologies: ["React & Redux", "Node.js", "MongoDB"],
     },
     {
       title: "Real-time Crypto Price Tracker",
@@ -40,11 +19,11 @@ export default function ProjectsSection() {
       github: "https://github.com/payalmaheshwarii/Real-time-crypto-pricee",
     },
     {
-      title: "Horses vs Humans Classifier",
-      description: "Machine learning model for image classification using deep learning",
-      image: "https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
-      technologies: ["Python", "TensorFlow", "ML"],
-      github: "https://github.com/payalmaheshwarii/horses-or-humans",
+      title: "Universal HealthCard Portal",
+      description: "Online medical details management system for Smart Gujarat Hackathon",
+      image: "./assets/SGH_medical.png",
+      technologies: ["CSS", "HTML", "JavaScript"],
+      github: "https://github.com/payalmaheshwarii/SGH-2019-20-",
     },
   ];
 
