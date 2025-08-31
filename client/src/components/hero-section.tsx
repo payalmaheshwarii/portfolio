@@ -74,7 +74,7 @@ export default function HeroSection() {
           </div>
           <div className="flex justify-center">
             <img
-              src="./assets/profile photo_2.png"
+              src="./assets/Main_profile_photo.png"
               alt="Professional developer workspace"
               className="rounded-2xl shadow-2xl w-full max-w-md hover-lift"
               data-testid="img-hero"

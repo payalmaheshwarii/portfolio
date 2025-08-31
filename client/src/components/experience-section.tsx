@@ -38,7 +38,7 @@ export default function ExperienceSection() {
   ];
 
   return (
-    <section id="experience" className="py-20" data-testid="experience-section">
+    <section id="experience" className="py-10" data-testid="experience-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4" data-testid="experience-title">

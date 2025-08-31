@@ -1,6 +1,8 @@
 import { Card } from "@/components/ui/card";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export default function AboutSection() {
+   const isMobile = useIsMobile();
   return (
     <section
       id="about"
@@ -18,16 +20,16 @@ export default function AboutSection() {
           </p>
         </div>
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div>
+          {<div>
             <img
-              src="./assets/profile.jpg"
+              src="./assets/About_profile_photo.png"
               alt="Professional developer headshot"
               className="rounded-2xl w-80 h-100 shadow-lg mx-10"
               data-testid="img-about"
             />
-          </div>
+          </div>}
           <div className="space-y-4">
-            <p className="text-lg text-muted-foreground leading-relaxed" data-testid="about-text-1">
+            <p className="text-md text-muted-foreground leading-relaxed" data-testid="about-text-1">
               Based in Ahmedabad, Gujarat, I'm a software engineer at MeasureOne
               where I've been instrumental in developing and scaling consumer
               data-as-a-service platforms. My journey in tech spans over 4
