@@ -1,6 +1,8 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Github } from "lucide-react";
+import sourceMatesImage from "../../assets/sourceMates_1.png";
+import sghMedicalImage from "../../assets/SGH_medical.png";
 
 export default function ProjectsSection() {
   const projects = [
@@ -8,7 +10,7 @@ export default function ProjectsSection() {
       title: 'SourceMates',
       github: "https://github.com/payalmaheshwarii/SourceMates_UI",
       description: "SourceMates is a Tinder-style app built for coders to connect, and collaborate",
-      image: "./assets/sourceMates_1.png",
+      image: sourceMatesImage,
       technologies: ["React & Redux", "Node.js", "MongoDB"],
     },
     {
@@ -21,7 +23,7 @@ export default function ProjectsSection() {
     {
       title: "Universal HealthCard Portal",
       description: "Online medical details management system for Smart Gujarat Hackathon",
-      image: "./assets/SGH_medical.png",
+      image: sghMedicalImage,
       technologies: ["CSS", "HTML", "JavaScript"],
       github: "https://github.com/payalmaheshwarii/SGH-2019-20-",
     },
